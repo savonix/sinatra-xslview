@@ -1,0 +1,34 @@
+Sinatra-XSLView
+===============
+
+Summary
+-------
+
+Simple helper function to render XML via an XSL stylesheet. 
+
+
+Usage
+-----
+
+In the Sinatra application (on Debian):
+
+<pre>
+require 'xml/libxml'
+require 'xml/libxslt'
+
+# Not sure what the path will eventually be
+require 'helpers/xslview'
+
+get '/entries' do
+    # Using DataMapper
+    @myentries = Entry.all
+    # Example of using xslview and how xslviews could be chained together
+    myxml = builder :'xml/entries'
+    stepone = xslview myxml, '/path/to/views/xsl/entries.xsl'
+    stepone
+end
+
+</pre>
+
+
+
