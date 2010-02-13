@@ -1,23 +1,20 @@
 Sinatra-XSLView
 ===============
 
-Summary
--------
+## Summary: XSL Sinatra Helper
+
+## Description
 
 Simple helper function to render XML via an XSL stylesheet. 
 
 
-Usage
------
+## Usage
 
 In the Sinatra application (on Debian):
 
-<pre>
-require 'xml/libxml'
-require 'xml/libxslt'
-
-# Not sure what the path will eventually be
-require 'helpers/xslview'
+<pre class="sh_ruby">
+require 'xml/xslt'
+require 'sinatra/xslview'
 
 get '/entries' do
     # Using DataMapper
