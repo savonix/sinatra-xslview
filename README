@@ -5,7 +5,7 @@ Sinatra-XSLView
 
 ## Description
 
-Simple helper function to render XML via an XSL stylesheet. 
+Simple helper function to render XML via an XSL stylesheet.
 
 
 ## Usage
@@ -24,8 +24,6 @@ get '/entries' do
     stepone = xslview myxml, '/path/to/views/xsl/entries.xsl'
     stepone
 end
-
 </pre>
-
 
 
