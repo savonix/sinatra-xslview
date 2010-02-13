@@ -13,10 +13,10 @@ module Sinatra
   # TODO: cache stylesheets
   ##
   module XSLView
-  def xslview(myxml,myxsl)
-      xslt = ::XML::XSLT.new()
+    def xslview(myxml,myxsl)
+      xslt = XML::XSLT.new()
       xslt.xml = myxml
-      xslt.xsl = myxsl
+      xslt.xsl = options.xslviews + myxsl
       xslt.serve
     end
   end
