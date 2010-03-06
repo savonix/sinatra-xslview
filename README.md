@@ -21,7 +21,7 @@ get '/entries' do
     @myentries = Entry.all
     # Example of using xslview and how xslviews could be chained together
     myxml = builder :'xml/entries'
-    stepone = xslview myxml, '/path/to/views/xsl/entries.xsl'
+    stepone = xslview myxml, '/path/to/views/xsl/entries.xsl', {"param" => "value"}
     stepone
 end
 </pre>
